@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@500&display=swap');
+
+* {
+  padding: 0; 
+  margin: 0;
+  font-family: "Geologica", sans-serif;
+  font-size: 20px;
+}
+
+
+content {
+  padding: 60px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../images/background.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.comment-post {
+  display: flex;
+  align-items: flex-start;
+  width: 1700px;
+  margin-bottom: 20px;
+  border: 2px solid #1a64b7;
+  background-color: rgba(26, 100, 183, 0.85);
+  color: #fff;
+  padding: 12px;
+  position: relative;
+  z-index: 0; 
+  animation: anim-comment 3s;
+}
+
+#avatar1 {animation-timing-function: ease;}
+#avatar2 {animation-timing-function: ease-out;}
+#avatar3 {animation-timing-function: ease-in-out;}
+#avatar4 {animation-timing-function: ease-in;}
+#avatar5 {animation-timing-function: linear;}
+
+@keyframes anim-comment {
+  from  {background-color:rgba(26, 100, 183, 0.1); left:-200px; top:0px;}
+  to  {left:0px; top:0px;}
+}
+
+.user-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user-avatar img {
+  width: 100%;
+  height: auto;
+}
+
+.comment-content {
+  margin-left: 10px;
+}
+
+.username {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #fbbf16;
+}
+
+.comment {
+  margin-bottom: 10px;
+}
+
+.comment-box textarea {
+  padding: 4px 20px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #1a64b7;
+}
+
+.comment-box textarea {
+    height: 150px;
+    width: 500px;
+}
+
+.comment-box textarea:focus{
+    border: 1px solid #000;
+    outline: 0;
+}
+
+.comment-box button {
+    border: 0;
+    padding: 10px 30px;
+    background: #1a64b7;
+    font-size: 18px;
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+}
+
+.comment-box button:hover {
+    background-color: #5f93cd;
+}
