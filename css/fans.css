@@ -4,11 +4,21 @@
   padding: 0; 
   margin: 0;
   font-family: "Geologica", sans-serif;
-  font-size: 20px;
 }
 
+html,body{
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
 
 content {
+  flex: 1 1 auto;
+  font-size: 20px;
   padding: 60px;
   flex: 1;
   display: flex;
@@ -23,7 +33,7 @@ content {
 .comment-post {
   display: flex;
   align-items: flex-start;
-  width: 1700px;
+  width: 95%;
   margin-bottom: 20px;
   border: 2px solid #1a64b7;
   background-color: rgba(26, 100, 183, 0.85);
@@ -67,6 +77,10 @@ content {
   color: #fbbf16;
 }
 
+.comment-box{
+  width: 35%;
+}
+
 .comment {
   margin-bottom: 10px;
 }
@@ -80,12 +94,16 @@ content {
 
 .comment-box textarea {
     height: 150px;
-    width: 500px;
+    width: calc(100% - 42px);
 }
 
 .comment-box textarea:focus{
     border: 1px solid #000;
     outline: 0;
+}
+
+::placeholder {
+  font-size: 20px;
 }
 
 .comment-box button {
@@ -101,4 +119,85 @@ content {
 
 .comment-box button:hover {
     background-color: #5f93cd;
+}
+
+@media (max-width: 1024px){
+  content{
+    padding: 40px;
+    background-image: url("../images/fans.jpg");
+  }
+
+  .comment-box textarea {
+    height: 125px;
+  }
+
+  ::placeholder {
+    font-size: 16px;
+  }
+  
+  content, .comment-box button {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  content{
+    padding: 35px;
+  }
+
+  .comment-box textarea {
+    height: 100px;
+  }
+
+  ::placeholder {
+    font-size: 14px;
+  }
+  
+  content, .comment-box button {
+    font-size: 14px;
+  }
+
+  #avatar5{
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  content{
+    padding: 20px;
+  }
+
+  .comment-box textarea {
+    height: 80px;
+  }
+
+  ::placeholder {
+    font-size: 12px;
+  }
+  
+  content, .comment-box button {
+    font-size: 12px;
+  }
+
+  #avatar4{
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  content{
+    padding: 10px;
+  }
+
+  .comment-box textarea {
+    height: 60px;
+  }
+
+  ::placeholder {
+    font-size: 10px;
+  }
+
+  content, .comment-box button {
+    font-size: 10px;
+  }
 }

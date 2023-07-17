@@ -4,15 +4,24 @@
     padding: 0; 
     margin: 0;
     font-family: "Geologica", sans-serif;
+}
+
+html,body{
+    height: 100%;
+  }
+  
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+main{
+    flex:1 1 auto;
+}
+.history, .legends{
+    padding: 3em;
     font-size: 20px;
-}
-
-.history{
-    padding: 3em;
-}
-
-.legends{
-    padding: 3em;
 }
 
 .legends .legend{
@@ -23,6 +32,10 @@
 .legend .description p{
     animation-duration: 3s;
     animation-name: slidein;
+}
+
+.legends .legend img{
+    height: 612px;
 }
 
 @keyframes slidein {
@@ -57,7 +70,84 @@ td span{
     vertical-align: middle;
 }
 
-td img {
+.matches td img {
     height: 48.8px;
     vertical-align: middle;
+}
+
+@media (max-width: 1024px) {
+    .matches td img{
+        height: 30px
+    }
+
+    .history, .legends{
+        font-size: 14px;
+    }
+
+    .legends .legend img{
+        height: 480px;
+    }
+
+    .matches{
+        padding: 2em;
+    }
+}
+
+@media (max-width: 768px) {
+    .matches td img{
+        height: 24px
+    }
+
+    .history, .legends{
+        padding: 2em;
+        font-size: 12px;
+    }
+
+    .legends .legend img{
+        height: 240px;
+    }
+
+    .matches{
+        padding: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .matches td img{
+        height: 20px
+    }
+
+    .history, .legends{
+        padding: 1em;
+        font-size: 10px;
+    }
+
+    .legends .legend{
+        padding-bottom: 2em;
+    }
+
+    .legends .legend img{
+        display: none;
+    }
+
+    .matches{
+        padding: 4px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    .matches td img{
+        height: 16px
+    }
+
+    .history, .legends{
+        padding-bottom: 1em;
+        font-size: 8px;
+    }
+
+    .matches{
+        padding: 2px;
+        font-size: 8px;
+    }
 }
