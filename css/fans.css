@@ -26,14 +26,18 @@ content {
   align-items: center;
   flex-direction: column;
   background-image: url("../images/background.jpg");
-  background-size: 100%;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
+}
+
+#comments-container{
+  width: 95%;
 }
 
 .comment-post {
   display: flex;
   align-items: flex-start;
-  width: 95%;
   margin-bottom: 20px;
   border: 2px solid #1a64b7;
   background-color: rgba(26, 100, 183, 0.85);
@@ -53,18 +57,6 @@ content {
 @keyframes anim-comment {
   from  {background-color:rgba(26, 100, 183, 0.1); left:-200px; top:0px;}
   to  {left:0px; top:0px;}
-}
-
-.user-avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.user-avatar img {
-  width: 100%;
-  height: auto;
 }
 
 .comment-content {
@@ -90,11 +82,10 @@ content {
   margin-bottom: 15px;
   border-radius: 5px;
   border: 1px solid #1a64b7;
-}
-
-.comment-box textarea {
-    height: 150px;
-    width: calc(100% - 42px);
+  font-family: "Geologica", sans-serif;
+  font-size: 20px;
+  height: 150px;
+  width: calc(100% - 42px);
 }
 
 .comment-box textarea:focus{
@@ -129,6 +120,7 @@ content {
 
   .comment-box textarea {
     height: 125px;
+    font-size: 16px;
   }
 
   ::placeholder {
@@ -147,6 +139,7 @@ content {
 
   .comment-box textarea {
     height: 100px;
+    font-size: 14px;
   }
 
   ::placeholder {
@@ -155,10 +148,6 @@ content {
   
   content, .comment-box button {
     font-size: 14px;
-  }
-
-  #avatar5{
-    display: none;
   }
 }
 
@@ -169,6 +158,7 @@ content {
 
   .comment-box textarea {
     height: 80px;
+    font-size: 12px;
   }
 
   ::placeholder {
@@ -177,10 +167,6 @@ content {
   
   content, .comment-box button {
     font-size: 12px;
-  }
-
-  #avatar4{
-    display: none;
   }
 }
 
@@ -191,6 +177,7 @@ content {
 
   .comment-box textarea {
     height: 60px;
+    font-size: 10px;
   }
 
   ::placeholder {
