@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@500&display=swap');
+
+* {
+  padding: 0; 
+  margin: 0;
+  font-family: "Geologica", sans-serif;
+}
+
+html,body{
+  height: 100%;
+}
+  
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+main{
+  flex:1 1 auto;
+}
+
+#articles-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 25px;
+  padding: 5px;
+}
+
+article {
+  flex-basis: calc(25% - 50px);
+  margin: 25px;
+  padding: 15px;
+  text-align: center;
+  align-items: center;
+  background-color:rgb(162, 211, 222, 0.3);
+}
+
+article a {
+  color: black;
+  background-color:rgb(162, 211, 222, 0);
+  font-size: inherit;
+}
+
+article .data{
+  color: #999999;
+}
+
+article img{
+  height: 360px;
+}
+

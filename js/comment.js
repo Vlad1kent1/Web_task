@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   const commentForm = document.getElementById("comment-form");
-  const commentsContainer = document.getElementById("comments-container");
 
-  // Listen for form submission
   commentForm.addEventListener("submit", function(event) {
     event.preventDefault();
 
@@ -12,23 +10,22 @@ document.addEventListener("DOMContentLoaded", function() {
       return;
     }
 
-    const avatarId = "avatar" + (Math.floor(Math.random() * 5) +1);
-
     const currentDate = new Date().toLocaleDateString("en-GB");
+    const commentId = Date.now();
 
-    const commentElement = document.createElement("div");
-    commentElement.classList.add("comment-post");
-    commentElement.id = avatarId;
-    commentElement.innerHTML = `
-      <div class="comment-content">
-        <h3 class="username">Me</h3>
-        <p class="comment">${commentText}</p>
-        <p class="date">${currentDate}</p>
-      </div>
-    `;
+    const commentData = {
+      id: commentId,
+      text: commentText,
+      date: currentDate
+    };
+    saveDataToLocal(commentData);
 
-    commentsContainer.appendChild(commentElement);
-
-    commentForm.querySelector(".comment").value = "";
+    window.location.reload();
   });
 });
+
+function saveDataToLocal(commentData) {
+  const comments = JSON.parse(localStorage.getItem('comments') || '[]');
+  comments.push(commentData);
+  localStorage.setItem('comments', JSON.stringify(comments));
+}

@@ -8,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="../images/gsw-logo-1920.svg">
    
     <link rel="stylesheet" href="../css/layouts/_header.css">
-    <link rel="stylesheet" href="../css/fans.css">
+    <link rel="stylesheet" href="../css/showarticle.css">
     <link rel="stylesheet" href="../css/layouts/_footer.css">
  </head>
 <body>
@@ -31,8 +31,8 @@
                       <li><a href="#">Raitings</a></li>
                   </ul>
               </ul></li>
-              <li><a href="news.html">News</a></li>
-              <li><a class="active" href="fans.html">Fans</a></li>
+              <li><a class="active" href="news.html">News</a></li>
+              <li><a href="fans.html">Fans</a></li>
               <li><a href="#">Contacts</a></li>
               <li><a href="admin.html">Admin</a></li>
           </ul>
@@ -40,16 +40,9 @@
       <a href="#"><img class="logo" src="../images/gsw-logo-1920.svg" alt="logo"></a>
     </header>
 
-    <content>
-      <div id="comments-container"></div>
-      
-      <div class="comment-box"> 
-        <form id="comment-form">
-          <textarea class="comment" placeholder="Type your comment..."></textarea>
-          <button type="sumbit">Sumbit Comment</button>
-        </form>
-      </div>
-    </content>
+    <main>
+      <div id="article-container"></div>
+    </main>
 
     <footer class="footer">
       <div class="container">
@@ -81,6 +74,5 @@
     </footer>
   </div>
 </body>
-<script type="text/javascript" src="../js/comment.js"></script>
-<script type="text/javascript" src="../js/showcomments.js"></script>
+<script src="../js/showarticle.js"></script>
 </html>
